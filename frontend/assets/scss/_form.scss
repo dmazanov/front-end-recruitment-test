@@ -1,0 +1,141 @@
+.form {
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  fieldset {
+    margin: 0 0 32px;
+    padding: 0;
+    border: none;
+    @media (min-width: 1024px) {
+      order: 1;
+      width: 656px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #000;
+      @media (min-width: 1024px) {
+        order: 3;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__legend {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    text-transform: uppercase;
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+
+
+    &-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      font-size: 16px;
+      line-height: 19px;
+      background-color: #000000;
+      color: #fff;
+      border-radius: 50%;
+      @media (min-width: 1024px) {
+        position: absolute;
+        left: -32px;
+      }
+    }
+
+    &-icon {
+      margin-left: 19px;
+    }
+  }
+
+  &-group {
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 16px;
+
+      .form-control {
+        flex-basis: 50%;
+      }
+    }
+  }
+
+  &-control {
+    position: relative;
+    margin-bottom: 16px;
+
+    .label {
+      position: absolute;
+      top: 5px;
+      left: 16px;
+      z-index: 1;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 16px;
+      letter-spacing: 0.0015em;
+      color: #000000;
+    }
+
+    &.error {
+      input {
+        border-color: #c30000;
+        box-shadow: inset 0 0 0 1px #c30000;
+      }
+      .error-text {
+        color: #c30000;
+        font-size: 12px;
+        line-height: 1;
+      }
+    }
+
+    &.success {
+      input {
+        border-color: #289b38;
+        box-shadow: inset 0 0 0 1px #289b38;
+      }
+    }
+
+    .card-input {
+      padding-right: 50px;
+    }
+    .creditCard-icon {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+    }
+    .securityCode-input {
+      padding-right: 40px;
+    }
+    .securityCode-icon {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+    }
+  }
+}
+
+
+.actions {
+  @media (min-width: 1024px) {
+    order: 4;
+    width: 656px;
+  }
+}
+
